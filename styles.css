@@ -5,6 +5,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,11 +22,43 @@ a {
   text-decoration: none;
 }
 
+/* Background Slider */
+
+.background-slider {
+  animation: background-change 30s infinite;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes background-change {
+  0% { background-image: url('assets/Sakura.jpg'); }
+  25% { background-image: url('assets/Racket.jpg'); }
+  50% { background-image: url('assets/HongYaDong.jpg'); }
+  75% { background-image: url('assets/CampingFire.jpg'); }
+  100% { background-image: url('assets/Sakura.jpg'); }
+}
+
 /* Header */
 
 header {
-  background: #f4f4f4;
+  background: rgba(244, 244, 244, 0.9);
+  display: flex;
+  align-items: center;
   padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  height: 80px;
+  margin-right: 20px;
+  width: 80px;
 }
 
 header h1 {
@@ -40,22 +73,3 @@ nav ul {
 nav ul li {
   display: inline;
   margin-right: 20px;
-}
-
-/* Main Sections */
-
-main {
-  padding: 20px;
-}
-
-section {
-  margin-bottom: 20px;
-}
-
-/* Footer */
-
-footer {
-  background: #f4f4f4;
-  padding: 20px;
-  text-align: center;
-}
