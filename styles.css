@@ -1,3 +1,6 @@
+/* Import the custom font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* Basic Styles */
 
 body {
@@ -22,31 +25,94 @@ a {
   text-decoration: none;
 }
 
-/* Background Slider */
+/* Introduction Section */
+#introduction {
+  margin-bottom: 20px;
+}
 
+/* Project Container */
+.project-container {
+  max-width: 90%; /* Adjust this value to set the maximum width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Project Grid */
+.project-grid {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100%;
+  padding: 0 7.5%; /* Add left and right padding of 7.5% */
+}
+
+/* Project Item */
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1; /* Remove the '1 1 200px' rule and replace it with '1' */
+  margin: 0 7.5%; /* Add left and right margin of 7.5% */
+}
+
+.project-image {
+  width: 100%; /* Change from 'max-width' to 'width' */
+  height: 100%; /* Add this rule to set the height to 100% */
+  object-fit: cover; /* Change from 'contain' to 'cover' */
+}
+
+#publications a {
+  color: #50cbff;
+}
+
+/* Contact */
+#contact {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 40px; 
+}
+
+/* Contact Items */
+.contact-item {
+  display: inline;
+  margin-right: 20px;
+}
+
+/* Container */
+.container {
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Background Slider */
 .background-slider {
-  animation: background-change 30s infinite;
+  animation: background-change 60s infinite;
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   bottom: 0;
   left: 0;
   position: fixed;
   right: 0;
-  top: 0;
+  top: 70%;
   z-index: -1;
 }
 
 @keyframes background-change {
   0% { background-image: url('assets/Sakura.jpg'); }
   25% { background-image: url('assets/Racket.jpg'); }
-  50% { background-image: url('assets/HongYaDong.jpg'); }
-  75% { background-image: url('assets/CampingFire.jpg'); }
+  50% { background-image: url('assets/HongYaDong.png'); }
+  75% { background-image: url('assets/Racket_in_starLight.png'); }
   100% { background-image: url('assets/Sakura.jpg'); }
 }
 
 /* Header */
 
 header {
-  background: rgba(244, 244, 244, 0.9);
+  background: rgba(255, 241, 234, 0.9);
   display: flex;
   align-items: center;
   padding: 20px;
@@ -58,7 +124,7 @@ header {
   border-radius: 50%;
   height: 80px;
   margin-right: 20px;
-  width: 80px;
+  width: 100px;
 }
 
 header h1 {
@@ -73,4 +139,28 @@ nav ul {
 nav ul li {
   display: inline;
   margin-right: 20px;
+}
+
+/* Copyright Centered */
+#copyright {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+
+/* Blogs page main section */
+body.blogs main {
+  background-color: rgba(146, 255, 213, 0.3); /* Change the color and transparency */
+  padding: 2rem; /* Add padding for spacing */
+}
+
+/* Blog items */
+body.blogs main ul {
+  list-style-type: decimal; /* Add numbering */
+  padding-left: 1.5rem; /* Add left padding for proper indentation */
+  color: #50cbff;
+}
+
+body.blogs main ul li {
+  margin-bottom: 1rem; /* Add spacing between blog items */
 }
